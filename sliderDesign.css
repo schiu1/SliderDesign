@@ -1,26 +1,59 @@
 :root{
-    --text-color: blue;
+    --text-color: white;
+    --font-fam: Verdana, Arial, sans-serif;
 }
 
-.number-text1, .caption1{
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.number-text, .caption{
     color: var(--text-color, green);
     font-size: 20px;
+    font-family: var(--font-fam, "Times New Roman");
 }
 
-.slide1{
+.slide1, .slide2, .slide3, .slide4{
     text-align: center;
     position: relative;
 }
 
-.number-text1{
+.number-text{
     position: absolute;
     top: 20px;
     left: 20px;
 }
 
-.caption1{
+.image{
+    height: 100%;
+    width: 100%;
+}
+
+.caption{
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.slide2, .slide3, .slide4{
+    display: none;
+}
+
+.leftArrowButton, .rightArrowButton{
+    cursor: pointer;
+    position: absolute;
+    font-size: 30px;
+    right: 50px;
+    bottom: 50px;
+    width: 60px;
+    background-color: rgb(0,0,0,0);
+    color: var(--text-color, green);
+    border-color: var(--text-color, green);
+    border-radius: 5px;
+}
+
+.leftArrowButton{
+    right: 115px;
 }
