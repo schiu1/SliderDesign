@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+body{
+    overflow: hidden;
+}
+
 .number-text, .caption{
     color: var(--text-color, green);
     font-size: 20px;
