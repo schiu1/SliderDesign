@@ -29,6 +29,7 @@ body{
 .image{
     height: 100vh;
     width: 100vw;
+    object-fit: cover;
 }
 
 .caption{
