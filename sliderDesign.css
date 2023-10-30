@@ -15,9 +15,15 @@ body{
     font-family: var(--font-fam, "Times New Roman");
 }
 
-.slide1, .slide2, .slide3, .slide4{
+.slide{
     text-align: center;
-    position: relative;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slide[data-active]{
+    opacity: 1;
 }
 
 .number-text{
@@ -37,10 +43,6 @@ body{
     bottom: 30px;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.slide2, .slide3, .slide4{
-    display: none;
 }
 
 .leftArrowButton, .rightArrowButton{
