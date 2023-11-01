@@ -1,8 +1,24 @@
-setTimeout(AutoChange, 5000);
+const rightButton = document.getElementById("rightButton");
+const leftButton = document.getElementById("leftButton");
 
-function AutoChange(){
+let timeout = setTimeout(AutoChange, 5000, 1);
+
+rightButton.addEventListener("click", () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(AutoChange, 5000, 1);
     ChangeSlide(1);
-    setTimeout(AutoChange, 5000);
+});
+
+leftButton.addEventListener("click", () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(AutoChange, 5000, -1);
+    ChangeSlide(-1);
+});
+
+
+function AutoChange(direction){
+    ChangeSlide(direction);
+    timeout = setTimeout(AutoChange, 5000, direction);
 }
 
 function ChangeSlide(direction){
