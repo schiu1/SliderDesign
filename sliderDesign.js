@@ -1,3 +1,10 @@
+setTimeout(AutoChange, 5000);
+
+function AutoChange(){
+    ChangeSlide(1);
+    setTimeout(AutoChange, 5000);
+}
+
 function ChangeSlide(direction){
     const slides = document.querySelectorAll(".slide");
     let newSlide = 0;
